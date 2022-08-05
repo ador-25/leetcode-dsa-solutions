@@ -1,27 +1,17 @@
-class Solution {
-public int[] plusOne(int[] digits) {
-        if(digits[digits.length-1]!=9){
-            digits[digits.length-1]++;
-            return digits;
-        }
-        else{
-            ArrayList<Integer> num= new ArrayList<>();
-            int carry=1;
-            for(int i=digits.length-1;i>=0;i--){
-                int temp=carry+digits[i];
-                if(temp<10){
-                    carry=0;
-                    num.add(temp);
-                }
-                else {
-                    num.add(0);
-                }
+class Solution {   
+    public int[] plusOne(int[] digits) {
+        for(int i=digits.length-1;i>=0;i--){
+            if(digits[i]!=9){
+                digits[i]++;
+                break;
             }
-            if(carry==1)
-                num.add(1);
-
-            Collections.reverse(num);
-            return num.stream().mapToInt(Integer::intValue).toArray();
+            else digits[i]=0;
         }
+        if(digits[0]==0){
+            int[] res= new int[digits.length+1];
+            res[0]=1;
+            return res;
+        }
+        return digits;
     }
 }
