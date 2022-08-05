@@ -15,8 +15,6 @@ public int[][] matrixReshape(int[][] mat, int r, int c) {
             for(int j=0;j<result[0].length;j++)
                 result[i][j]=nextElements[counter++];
         }
-        if(counter!=nextElements.length)
-            return mat;
         return result;
     }
 
