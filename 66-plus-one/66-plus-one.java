@@ -7,12 +7,6 @@ class Solution {
             if(temp<10){
                 carry=0;
                 num.add(temp);
-                int j=i-1;
-                while (0<=j){
-                    num.add(digits[j]);
-                    j--;
-                }
-                break;
             }
             else {
                 num.add(0);
