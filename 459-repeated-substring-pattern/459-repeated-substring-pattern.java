@@ -6,7 +6,7 @@ public boolean repeatedSubstringPattern(String s) {
         //n^2
 
         int size=s.length();
-        for(int i=1;i<size;i++){
+        for(int i=1;i<=size/2;i++){
             if(size%i==0){
                 if(stringMatchingHelper(s,s.substring(0,i)))
                     return true;
