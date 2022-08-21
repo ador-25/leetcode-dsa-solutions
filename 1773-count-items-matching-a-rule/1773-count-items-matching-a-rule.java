@@ -5,10 +5,10 @@ class Solution {
             if(ruleKey.equals("color") && item.get(1).equals(ruleValue)){
                 count++;
             }
-            if(ruleKey.equals("type") && item.get(0).equals(ruleValue)){
+            else if(ruleKey.equals("type") && item.get(0).equals(ruleValue)){
                 count++;
             }
-            if(ruleKey.equals("name") && item.get(2).equals(ruleValue)){
+            else if(ruleKey.equals("name") && item.get(2).equals(ruleValue)){
                 count++;
             }
         }
