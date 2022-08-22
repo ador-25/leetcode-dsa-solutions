@@ -7,12 +7,8 @@ class Solution {
             map[i]+=map[i-1];
         }
         for(int i=0;i<nums.length;i++){
-            try {
-                nums[i]=map[nums[i]-1];
-            }
-            catch (Exception e) {
-                nums[i] = 0;
-            }
+            nums[i]=nums[i]!=0?map[nums[i]-1]:0;
+
         }
         return nums;
     }
