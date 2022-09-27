@@ -1,20 +1,19 @@
 class Solution {
-    public List<Integer> targetIndices(int[] nums, int target) {
+public List<Integer> targetIndices(int[] nums, int target) {
         List<Integer> res= new ArrayList<>();
-        int[]map= new int[101];
-        for(int i=0;i<nums.length;i++)
-            ++map[nums[i]];
-        int i=1;
-        int sum=0;
-        while(i!=target){
-          sum+=map[i++];
+        int low=0,equal=0;
+        for(int i=0;i<nums.length;i++) {
+            if (nums[i] < target)
+                low++;
+            else if(nums[i]==target)
+                equal++;
         }
-        int first=sum;
         int count=0;
-
-        while(count++!=map[target]){
-            res.add(first++);
+        int next=low;
+        while(count++!=equal){
+            res.add(next++);
         }
+
         return res;
     }
 }
