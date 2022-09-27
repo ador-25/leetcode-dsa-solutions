@@ -3,7 +3,7 @@ class Solution {
         List<Integer> res= new ArrayList<>();
         int[]map= new int[101];
         for(int i=0;i<nums.length;i++)
-            map[nums[i]]++;
+            ++map[nums[i]];
         int i=1;
         int sum=0;
         while(i!=target){
