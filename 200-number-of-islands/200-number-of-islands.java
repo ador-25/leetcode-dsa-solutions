@@ -17,7 +17,10 @@ public static int find (int  x){
             }
         }
 
-        int [][]dis= new int[][]{{ 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 }};
+        int [][]dis= new int[][]{{ 1, 0 },
+                                 { -1, 0 },
+                                 { 0, 1 },
+                                 { 0, -1 }};
         int n=grid.length;
         int m=grid[0].length;
         p= new int[m*n];
