@@ -1,14 +1,8 @@
 public class Solution {
-public int NumberOfEmployeesWhoMetTarget(ReadOnlySpan<int> hours, int target)
-{
-    int count = 0;
-    for (int i = 0; i < hours.Length; i++)
-    {
-        if (hours[i] >= target)
-        {
-            count++;
-        }
+    public int NumberOfEmployeesWhoMetTarget(int[] hours, int target) {
+        int res=0;
+        for(int i=0;i<hours.Length;i++)
+            res=hours[i]>=target? res+1:res;
+        return res;
     }
-    return count;
-}
 }
