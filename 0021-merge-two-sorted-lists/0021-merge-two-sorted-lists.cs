@@ -16,7 +16,7 @@ public class Solution {
         while(list1!=null&&list2!=null)
         {
 
-            if(list1.val>list2.val || list1.val==list2.val)
+            if(list1.val>list2.val)
             {
                 curr.next = list2;
                 list2 = list2.next;
