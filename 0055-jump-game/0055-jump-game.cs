@@ -16,7 +16,6 @@ public class Solution {
         {
             if (i + nums[i] >= nearestEscapeIndex)
                 return true;
-            //cant move forward
             if(nums[i]==0)
                 break;
         }
