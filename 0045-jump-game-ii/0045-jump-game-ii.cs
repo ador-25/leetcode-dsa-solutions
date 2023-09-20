@@ -11,7 +11,7 @@ public class Solution {
             for (int j = i + 1; j <= dist; j++)
             {
                 if(j== nums.Length)
-                break;
+                    break;
                 distances[j] = Math.Min(distances[j], (distances[i]+1));
             }
         }
