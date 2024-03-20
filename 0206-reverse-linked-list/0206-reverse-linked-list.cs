@@ -13,7 +13,7 @@
  // 1 2 4 5
 public class Solution {
     public ListNode ReverseList(ListNode head) {
-        if(head is null)
+        if(head == null)
             return head;
         ListNode current = head;
         ListNode previous = null;
