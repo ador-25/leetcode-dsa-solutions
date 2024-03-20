@@ -12,7 +12,8 @@
  * }
  */
 public class Solution {
-    public bool IsSameTree(TreeNode p, TreeNode q) {
+    public bool IsSameTree(TreeNode p, TreeNode q) 
+    {
         return isSame(p,q);
     }
     private bool isSame(TreeNode p, TreeNode q)
