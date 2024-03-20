@@ -17,7 +17,8 @@ public class Solution {
         {
             return head;
         }
-        ListNode current = head,previous = null;
+        ListNode current = head;
+        ListNode previous = null;
         while(current!=null){
             ListNode temp = current.next;
             current.next = previous;
