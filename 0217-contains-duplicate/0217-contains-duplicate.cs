@@ -2,15 +2,15 @@ class Solution
 {
     public bool ContainsDuplicate(int[] nums)
     {
-        Span<int> span = new Span<int>(nums);
         HashSet<int> set = new HashSet<int>();
-        for (int i = 0; i < span.Length; i++)
+        set.Add(nums[0]);
+        for (int i = 1; i < nums.Length; i++)
         {
-            if (set.Contains(span[i]))
+            if (set.Contains(nums[i]))
             {
                 return true;
             }
-            set.Add(span[i]);
+            set.Add(nums[i]);
         }
         return false;
     }
