@@ -2,7 +2,7 @@ class Solution
 {
     public bool ContainsDuplicate(int[] nums)
     {
-        var span = nums.AsSpan();
+        Span<int> span = new Span<int>(nums);
         HashSet<int> set = new HashSet<int>();
         for (int i = 0; i < span.Length; i++)
         {
